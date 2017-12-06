@@ -1,7 +1,11 @@
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel",
+        "thrift"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -23,7 +27,8 @@
             "database/factories"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Xin\\Thrift\\": "thrift/gen-php/Xin/Thrift/"
         }
     },
     "autoload-dev": {
