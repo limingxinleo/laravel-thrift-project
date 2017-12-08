@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands\Thrift\Test;
 
+use App\Thrift\Clients\AppClient;
 use Illuminate\Console\Command;
 
 class Version extends Command
@@ -18,7 +19,7 @@ class Version extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'Test Get Thrift RPC Version';
 
     /**
      * Create a new command instance.
@@ -37,6 +38,7 @@ class Version extends Command
      */
     public function handle()
     {
-        echo 1;
+        $client = AppClient::getInstance();
+        $this->info($client->version());
     }
 }
